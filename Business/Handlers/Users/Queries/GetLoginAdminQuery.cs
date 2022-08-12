@@ -25,7 +25,7 @@ public class GetLoginAdminQuery:IRequest<IResponse>
         public GetLoginAdminQueryHandler(IUserRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
-            _configuration = configuration;
+            _configuration = configuration; 
         }
 
         public async Task<IResponse> Handle(GetLoginAdminQuery request, CancellationToken cancellationToken)
