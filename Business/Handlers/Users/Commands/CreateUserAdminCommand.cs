@@ -33,6 +33,7 @@ public class CreateUserAdminCommand:IRequest<IResponse>
             newUser.UserName = request.UserName;
             newUser.FirstName = request.FirstName;
             newUser.LastName = request.LastName;
+            newUser.isActive = true;
             newUser.PasswordHash = passwordHash;
             newUser.PasswordSalt = passwordSalt;
             

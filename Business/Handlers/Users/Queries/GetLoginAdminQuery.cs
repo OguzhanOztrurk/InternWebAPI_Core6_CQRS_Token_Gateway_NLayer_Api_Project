@@ -31,10 +31,12 @@ public class GetLoginAdminQuery:IRequest<IResponse>
         public async Task<IResponse> Handle(GetLoginAdminQuery request, CancellationToken cancellationToken)
         {
             var newUser = await _userRepository.GetAsync(x => x.UserName == request.UserName);
+            
 
-            if (newUser == null) return new Response<User>(null,561,  "Wrong Username");
+            if (newUser == null) return new Response<User>(null,  "Wrong Username");
             else if (!VerifyPasswordHash(request.Password, newUser.PasswordHash, newUser.PasswordSalt))
-                return new Response<User>(newUser,422,  "Wrong password");
+                return new Response<User>(newUser,  "Wrong password");
+            _userRepository.UserDeleteControl(newUser.UserId);
             var newToken = new TokenDTO();
             newToken.Token = CreateToken(newUser);
             return new Response<TokenDTO>(newToken);

@@ -26,11 +26,11 @@ public class WorkplaceConfiguration:IEntityTypeConfiguration<Workplace>
         #endregion
         #region Foreign Key
 
-        builder
+        /*builder
             .HasOne(x =>x.Admin)
             .WithOne(x => x.Workplace)
             .HasForeignKey<Workplace>(x => x.AdminId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Restrict);*/
 
         #endregion
     }

@@ -26,6 +26,12 @@ public class AppDbContext:DbContext
     public virtual DbSet<Talent> Talents { get; set; }
     public virtual DbSet<WorkHistory> WorkHistories { get; set; }
     public virtual DbSet<Workplace> Workplaces { get; set; }
+    public virtual DbSet<Advert> Adverts { get; set; }
+    public virtual DbSet<AdvertCategory> AdvertCategories { get; set; }
+    public virtual DbSet<AdvertDetail> AdvertDetails { get; set; }
+    public virtual DbSet<Appeal> Appeals { get; set; }
+    public virtual DbSet<AppealEvaluation> AppealEvaluations { get; set; }
+    public virtual DbSet<WorkplaceIntern> WorkplaceInterns { get; set; }
     #endregion
         
         
@@ -40,6 +46,12 @@ public class AppDbContext:DbContext
         new UserConfiguration().Configure(modelBuilder.Entity<User>());
         new WorkHistoryConfiguration().Configure(modelBuilder.Entity<WorkHistory>());
         new WorkplaceConfiguration().Configure(modelBuilder.Entity<Workplace>());
+        new AdvertCategoryConfiguration().Configure(modelBuilder.Entity<AdvertCategory>());
+        new AdvertConfiguration().Configure(modelBuilder.Entity<Advert>());
+        new AdvertDetailConfiguration().Configure(modelBuilder.Entity<AdvertDetail>());
+        new AppealConfiguration().Configure(modelBuilder.Entity<Appeal>());
+        new AppealEvaluationConfiguration().Configure(modelBuilder.Entity<AppealEvaluation>());
+        new WorkplaceInternConfiguration().Configure(modelBuilder.Entity<WorkplaceIntern>());
         
         #endregion
 

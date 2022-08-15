@@ -32,7 +32,6 @@ public class ExceptionHandlingMiddleware
         {
             Sources=ex.Source,
             Exception="Error",
-            ErrorCode=1,
             ErrorMessage = ex.Message, 
             ErrorId=Guid.NewGuid(),
             StatusCode=HttpStatusCode.InternalServerError

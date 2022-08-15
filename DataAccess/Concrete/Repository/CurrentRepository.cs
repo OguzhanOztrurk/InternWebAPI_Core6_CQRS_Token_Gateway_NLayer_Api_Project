@@ -21,9 +21,5 @@ public class CurrentRepository:EfEntityRepositoryBase<User,AppDbContext>,ICurren
         var userId= _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         return Guid.Parse(userId);
     }
-
-    public string UserRole()
-    {
-        return _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Role).Value;
-    }
+    
 }

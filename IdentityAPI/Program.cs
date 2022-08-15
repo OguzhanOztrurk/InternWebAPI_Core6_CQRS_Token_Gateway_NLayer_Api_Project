@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Reflection;
 using System.Text;
 using DataAccess.Concrete.EntityFramework.Contexts;
+using DataAccess.Exception;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -79,6 +80,8 @@ builder.Services.AddDbContext<AppDbContext>(x =>
 
 var app = builder.Build();
 
+//Custom exception
+app.UseMiddleware(typeof(ExceptionHandlingMiddleware));
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

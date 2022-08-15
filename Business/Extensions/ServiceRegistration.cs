@@ -56,6 +56,7 @@ namespace Business.Extensions
                 .AddTransient<ICurrentRepository, CurrentRepository>()
                 .AddTransient<IUserRepository, UserRepository>()
                 .AddTransient<IAdminRepository, AdminRepository>()
+                .AddTransient<IWorkplaceRepository,WorkplaceRepository>()
                 ;
             
         }

@@ -11,19 +11,19 @@ namespace Core.Wrappers
     {
        
 
-        public Response(T data,int errorCode=0, string message = null)
+        public Response(T data, string message = null)
         {
             Succeeded = true;
             Message = message;
             Data = data;
-            ErrorCode = errorCode;
+            
         }
 
         
 
 
 
-        public int ErrorCode { get; set; }
+        
         public bool Succeeded { get; set; }
         public string Message { get; set; }
         public List<string> Errors { get; set; }

@@ -17,20 +17,23 @@ public class User:IEntity,IPassive,IDeletion
     public string UserName { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
+    [JsonIgnore]
     public string? Number { get; set; }
+    [JsonIgnore]
     public string? Email { get; set; }
     [JsonIgnore] public byte[] PasswordHash { get; set; }
     [JsonIgnore] public byte[] PasswordSalt { get; set; }
 
     #region Active
-
+    [JsonIgnore]
     public bool isActive { get; set; }
 
     #endregion
 
     #region Delete
-    
+    [JsonIgnore]
     public DateTime? DeleteDate { get; set; }
+    [JsonIgnore]
     public Guid? DeleteUserId { get; set; }
 
     #endregion
@@ -39,7 +42,9 @@ public class User:IEntity,IPassive,IDeletion
 
     #region Foreign Key
 
+    [JsonIgnore]
     public Admin Admin { get; set; }
+    [JsonIgnore]
     public Intern Intern { get; set; }
 
     #endregion

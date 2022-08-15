@@ -80,3 +80,17 @@ C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\Entities\obj\Debug\net6.0\refint
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\Entities\obj\Debug\net6.0\Entities.pdb
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\Entities\obj\Debug\net6.0\ref\Entities.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\bin\Debug\net6.0\Entities.deps.json
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\bin\Debug\net6.0\Entities.runtimeconfig.json
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\bin\Debug\net6.0\Entities.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\bin\Debug\net6.0\Entities.pdb
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\refint\Entities.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.pdb
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\Entities\obj\Debug\net6.0\ref\Entities.dll

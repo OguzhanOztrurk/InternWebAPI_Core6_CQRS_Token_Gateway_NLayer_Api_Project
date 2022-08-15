@@ -19,7 +19,7 @@ public class Admin:IEntity
     #region Foreign Key
 
     public User User { get; set; }
-    public Workplace Workplace { get; set; }
+    public ICollection<Workplace>  Workplace { get; set; }
 
     #endregion
     

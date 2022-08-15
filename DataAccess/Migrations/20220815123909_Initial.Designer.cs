@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220811192746_Initial")]
+    [Migration("20220815123909_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,198 @@ namespace DataAccess.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Admins");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Advert", b =>
+                {
+                    b.Property<int>("AdvertId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdvertId"), 1L, 1);
+
+                    b.Property<int>("AdvertCategoryCategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AdvertName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("AdvertSummary")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("CreatedUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeleteUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Quota")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("UpdateUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("WorkplaceId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("AdvertId");
+
+                    b.HasIndex("AdvertCategoryCategoryId");
+
+                    b.HasIndex("WorkplaceId");
+
+                    b.ToTable("Adverts");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.AdvertCategory", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Categorydefinition")
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("AdvertCategories");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.AdvertDetail", b =>
+                {
+                    b.Property<int>("AdvertId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CompanyInfo")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<string>("Facilities")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<string>("Quality")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<string>("Wage")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("nvarchar(16)");
+
+                    b.Property<string>("WorkDefinition")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<string>("WorkEnvironment")
+                        .IsRequired()
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)");
+
+                    b.Property<string>("WorkHour")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("AdvertId");
+
+                    b.ToTable("AdvertDetails");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Appeal", b =>
+                {
+                    b.Property<int>("AppealId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AppealId"), 1L, 1);
+
+                    b.Property<int>("AdvertId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeleteUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("EvaluationState")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("InternId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("AppealId");
+
+                    b.HasIndex("AdvertId");
+
+                    b.ToTable("Appeals");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.AppealEvaluation", b =>
+                {
+                    b.Property<int>("AppealId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Conclusion")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ConclusionDetail")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<bool>("InternApproval")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("AppealId");
+
+                    b.ToTable("AppealEvaluations");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Education", b =>
@@ -95,7 +287,12 @@ namespace DataAccess.Migrations
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
+                    b.Property<int>("WorkplaceInternId")
+                        .HasColumnType("int");
+
                     b.HasKey("UserId");
+
+                    b.HasIndex("WorkplaceInternId");
 
                     b.ToTable("Interns");
                 });
@@ -276,10 +473,42 @@ namespace DataAccess.Migrations
 
                     b.HasKey("WorkplaceId");
 
-                    b.HasIndex("AdminId")
-                        .IsUnique();
+                    b.HasIndex("AdminId");
 
                     b.ToTable("Workplaces");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.WorkplaceIntern", b =>
+                {
+                    b.Property<int>("WorkplaceInternId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WorkplaceInternId"), 1L, 1);
+
+                    b.Property<DateTime>("AcceptDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("DeleteUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("InternId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WorkplaceId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("WorkplaceInternId");
+
+                    b.HasIndex("WorkplaceId");
+
+                    b.ToTable("WorkplaceInterns");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Admin", b =>
@@ -291,6 +520,58 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Advert", b =>
+                {
+                    b.HasOne("Entities.Concrete.AdvertCategory", "AdvertCategory")
+                        .WithMany("Adverts")
+                        .HasForeignKey("AdvertCategoryCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Concrete.Workplace", "Workplace")
+                        .WithMany("Adverts")
+                        .HasForeignKey("WorkplaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AdvertCategory");
+
+                    b.Navigation("Workplace");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.AdvertDetail", b =>
+                {
+                    b.HasOne("Entities.Concrete.Advert", "Advert")
+                        .WithOne("AdvertDetail")
+                        .HasForeignKey("Entities.Concrete.AdvertDetail", "AdvertId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Advert");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Appeal", b =>
+                {
+                    b.HasOne("Entities.Concrete.Advert", "Advert")
+                        .WithMany("Appeals")
+                        .HasForeignKey("AdvertId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Advert");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.AppealEvaluation", b =>
+                {
+                    b.HasOne("Entities.Concrete.Appeal", "Appeal")
+                        .WithOne("AppealEvaluation")
+                        .HasForeignKey("Entities.Concrete.AppealEvaluation", "AppealId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Appeal");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Education", b =>
@@ -312,7 +593,15 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("Entities.Concrete.WorkplaceIntern", "WorkplaceIntern")
+                        .WithMany("Interns")
+                        .HasForeignKey("WorkplaceInternId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("User");
+
+                    b.Navigation("WorkplaceIntern");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Talent", b =>
@@ -340,17 +629,46 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Entities.Concrete.Workplace", b =>
                 {
                     b.HasOne("Entities.Concrete.Admin", "Admin")
-                        .WithOne("Workplace")
-                        .HasForeignKey("Entities.Concrete.Workplace", "AdminId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .WithMany("Workplace")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Admin");
                 });
 
+            modelBuilder.Entity("Entities.Concrete.WorkplaceIntern", b =>
+                {
+                    b.HasOne("Entities.Concrete.Workplace", "Workplace")
+                        .WithMany("WorkplaceInterns")
+                        .HasForeignKey("WorkplaceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Workplace");
+                });
+
             modelBuilder.Entity("Entities.Concrete.Admin", b =>
                 {
-                    b.Navigation("Workplace")
+                    b.Navigation("Workplace");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Advert", b =>
+                {
+                    b.Navigation("AdvertDetail")
+                        .IsRequired();
+
+                    b.Navigation("Appeals");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.AdvertCategory", b =>
+                {
+                    b.Navigation("Adverts");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Appeal", b =>
+                {
+                    b.Navigation("AppealEvaluation")
                         .IsRequired();
                 });
 
@@ -370,6 +688,18 @@ namespace DataAccess.Migrations
 
                     b.Navigation("Intern")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Entities.Concrete.Workplace", b =>
+                {
+                    b.Navigation("Adverts");
+
+                    b.Navigation("WorkplaceInterns");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.WorkplaceIntern", b =>
+                {
+                    b.Navigation("Interns");
                 });
 #pragma warning restore 612, 618
         }

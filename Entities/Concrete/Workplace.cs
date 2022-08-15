@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Entities.Base;
 using Entities.Base.GenericEntity;
 
@@ -21,14 +22,15 @@ public class Workplace:IEntity,IPassive,IDeletion
     public string Mission { get; set; }
 
     #region Active
-
+    
     public bool isActive { get; set; }
 
     #endregion
 
     #region Delete
-    
+    [JsonIgnore]
     public DateTime? DeleteDate { get; set; }
+    [JsonIgnore]
     public Guid? DeleteUserId { get; set; }
 
     #endregion
@@ -37,8 +39,12 @@ public class Workplace:IEntity,IPassive,IDeletion
 
     #region Foreign Key
 
+    [JsonIgnore]
     public Admin Admin { get; set; }
+    [JsonIgnore]
+    public ICollection<Advert> Adverts { get; set; }
+    [JsonIgnore]
+    public ICollection<WorkplaceIntern> WorkplaceInterns { get; set; }
 
     #endregion
-    
 }
