@@ -1,6 +1,7 @@
 
 
 using DataAccess.Concrete.Configurations;
+using DataAccess.Concrete.Seed;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -57,6 +58,7 @@ public class AppDbContext:DbContext
 
         #region Seeds
         //new TypeSeed().Configure(modelBuilder.Entity<Type>());
+        new AdvertCategorySeed().Configure(modelBuilder.Entity<AdvertCategory>());
         
         #endregion
         

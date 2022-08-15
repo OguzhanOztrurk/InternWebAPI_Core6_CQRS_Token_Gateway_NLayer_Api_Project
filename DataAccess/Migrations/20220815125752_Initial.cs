@@ -323,6 +323,18 @@ namespace DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AdvertCategories",
+                columns: new[] { "CategoryId", "CategoryName", "Categorydefinition" },
+                values: new object[,]
+                {
+                    { 1, "Software", "Companies that provide services in the field of software." },
+                    { 2, "Architecture", "Companies serving in the field of architecture.." },
+                    { 3, "Automobile", "Companies serving in the field of automobile." },
+                    { 4, "Machine", "Companies serving in the field of machine." },
+                    { 5, "Build", "Companies serving in the field of build." }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Adverts_AdvertCategoryCategoryId",
                 table: "Adverts",

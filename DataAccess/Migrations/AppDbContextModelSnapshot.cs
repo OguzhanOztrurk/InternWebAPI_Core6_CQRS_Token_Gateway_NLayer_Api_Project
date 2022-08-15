@@ -122,6 +122,38 @@ namespace DataAccess.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("AdvertCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            CategoryId = 1,
+                            CategoryName = "Software",
+                            Categorydefinition = "Companies that provide services in the field of software."
+                        },
+                        new
+                        {
+                            CategoryId = 2,
+                            CategoryName = "Architecture",
+                            Categorydefinition = "Companies serving in the field of architecture.."
+                        },
+                        new
+                        {
+                            CategoryId = 3,
+                            CategoryName = "Automobile",
+                            Categorydefinition = "Companies serving in the field of automobile."
+                        },
+                        new
+                        {
+                            CategoryId = 4,
+                            CategoryName = "Machine",
+                            Categorydefinition = "Companies serving in the field of machine."
+                        },
+                        new
+                        {
+                            CategoryId = 5,
+                            CategoryName = "Build",
+                            Categorydefinition = "Companies serving in the field of build."
+                        });
                 });
 
             modelBuilder.Entity("Entities.Concrete.AdvertDetail", b =>
