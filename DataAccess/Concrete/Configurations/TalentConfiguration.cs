@@ -20,5 +20,15 @@ public class TalentConfiguration:IEntityTypeConfiguration<Talent>
         builder.Property(x => x.TalentExplanation).IsRequired().HasMaxLength(400);
 
         #endregion
+
+        #region Foreign Key
+
+        builder
+            .HasOne(x => x.Intern)
+            .WithMany(x => x.Talent)
+            .HasForeignKey(x => x.InternId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        #endregion
     }
 }

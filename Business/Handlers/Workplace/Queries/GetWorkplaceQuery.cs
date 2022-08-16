@@ -1,7 +1,9 @@
 using Castle.Core.Internal;
 using Core.Wrappers;
 using DataAccess.Abstract;
+using DataAccess.Concrete.Enum;
 using MediatR;
+using Entities.Concrete;
 
 
 namespace Business.Handlers.Workplace.Queries;

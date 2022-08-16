@@ -20,5 +20,15 @@ public class WorkHistoryConfiguration:IEntityTypeConfiguration<WorkHistory>
         builder.Property(x => x.OperationTime).IsRequired().HasMaxLength(30);
 
         #endregion
+
+        #region Foreign Key
+
+        builder
+            .HasOne(x => x.Intern)
+            .WithMany(x => x.WorkHistory)
+            .HasForeignKey(x => x.InternId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        #endregion
     }
 }

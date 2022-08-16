@@ -12,5 +12,6 @@ public class AdvertCategoryConfiguration:IEntityTypeConfiguration<AdvertCategory
 
         builder.Property(x => x.CategoryName).HasMaxLength(100);
         builder.Property(x => x.Categorydefinition).HasMaxLength(250);
+        
     }
 }

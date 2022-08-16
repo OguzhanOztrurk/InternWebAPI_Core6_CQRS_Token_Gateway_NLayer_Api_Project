@@ -23,7 +23,7 @@ public class Intern:IEntity
     public ICollection<Education> Education { get; set; }
     public ICollection<WorkHistory>  WorkHistory { get; set; }
     public ICollection<Talent> Talent { get; set; }
-    public WorkplaceIntern WorkplaceIntern { get; set; }
+    
 
     #endregion
 }

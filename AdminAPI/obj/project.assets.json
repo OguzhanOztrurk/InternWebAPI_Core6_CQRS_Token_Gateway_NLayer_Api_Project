@@ -8740,6 +8740,7 @@
       "Business >= 1.0.0",
       "DataAccess >= 1.0.0",
       "Hellang.Middleware.ProblemDetails >= 5.0.0",
+      "Microsoft.EntityFrameworkCore.Relational >= 6.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Text.Json >= 6.0.0"
     ]
@@ -8803,6 +8804,10 @@
           "Hellang.Middleware.ProblemDetails": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
+            "target": "Package",
+            "version": "[6.0.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

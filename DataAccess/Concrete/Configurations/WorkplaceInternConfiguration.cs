@@ -8,6 +8,21 @@ public class WorkplaceInternConfiguration:IEntityTypeConfiguration<WorkplaceInte
 {
     public void Configure(EntityTypeBuilder<WorkplaceIntern> builder)
     {
+        #region Primary Key
+
         builder.HasKey(x => x.WorkplaceInternId);
+
+        #endregion
+
+        #region Foreign Key
+
+        builder
+            .HasOne(x => x.Workplace)
+            .WithMany(x => x.WorkplaceInterns)
+            .HasForeignKey(x => x.WorkplaceId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        #endregion
+
     }
 }

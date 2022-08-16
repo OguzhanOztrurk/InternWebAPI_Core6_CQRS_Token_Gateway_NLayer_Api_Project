@@ -64,6 +64,7 @@ public class AppDbContext:DbContext
         
         //Migration Ekleme //==> dotnet ef migrations add Initial -s IdentityAPI -p DataAccess
         //Veritabanı Güncelleme //==> dotnet ef database update -s IdentityAPI -p DataAccess
+        
            
     }
 }

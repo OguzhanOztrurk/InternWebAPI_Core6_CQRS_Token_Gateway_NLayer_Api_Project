@@ -44,9 +44,6 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdvertId"), 1L, 1);
 
-                    b.Property<int>("AdvertCategoryCategoryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("AdvertName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -95,7 +92,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("AdvertId");
 
-                    b.HasIndex("AdvertCategoryCategoryId");
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("WorkplaceId");
 
@@ -317,12 +314,7 @@ namespace DataAccess.Migrations
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
-                    b.Property<int>("WorkplaceInternId")
-                        .HasColumnType("int");
-
                     b.HasKey("UserId");
-
-                    b.HasIndex("WorkplaceInternId");
 
                     b.ToTable("Interns");
                 });
@@ -556,14 +548,14 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("Entities.Concrete.AdvertCategory", "AdvertCategory")
                         .WithMany("Adverts")
-                        .HasForeignKey("AdvertCategoryCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Entities.Concrete.Workplace", "Workplace")
                         .WithMany("Adverts")
                         .HasForeignKey("WorkplaceId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("AdvertCategory");
@@ -587,7 +579,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.Advert", "Advert")
                         .WithMany("Appeals")
                         .HasForeignKey("AdvertId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Advert");
@@ -609,7 +601,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.Intern", "Intern")
                         .WithMany("Education")
                         .HasForeignKey("InternId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Intern");
@@ -623,15 +615,7 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Entities.Concrete.WorkplaceIntern", "WorkplaceIntern")
-                        .WithMany("Interns")
-                        .HasForeignKey("WorkplaceInternId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("User");
-
-                    b.Navigation("WorkplaceIntern");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Talent", b =>
@@ -639,7 +623,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.Intern", "Intern")
                         .WithMany("Talent")
                         .HasForeignKey("InternId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Intern");
@@ -650,7 +634,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.Intern", "Intern")
                         .WithMany("WorkHistory")
                         .HasForeignKey("InternId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Intern");
@@ -661,7 +645,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.Admin", "Admin")
                         .WithMany("Workplace")
                         .HasForeignKey("AdminId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Admin");
@@ -672,7 +656,7 @@ namespace DataAccess.Migrations
                     b.HasOne("Entities.Concrete.Workplace", "Workplace")
                         .WithMany("WorkplaceInterns")
                         .HasForeignKey("WorkplaceId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Workplace");
@@ -725,11 +709,6 @@ namespace DataAccess.Migrations
                     b.Navigation("Adverts");
 
                     b.Navigation("WorkplaceInterns");
-                });
-
-            modelBuilder.Entity("Entities.Concrete.WorkplaceIntern", b =>
-                {
-                    b.Navigation("Interns");
                 });
 #pragma warning restore 612, 618
         }

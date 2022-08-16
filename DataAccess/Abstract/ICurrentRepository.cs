@@ -6,5 +6,5 @@ namespace DataAccess.Abstract;
 public interface ICurrentRepository:IEntityRepository<User>
 {
     Guid UserId();
-    
+    void AdminControl(Guid userId);
 }

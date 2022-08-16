@@ -1,6 +1,7 @@
 using AdminAPI.Controllers.BaseController;
 using Business.Handlers.Workplace.Commands;
 using Business.Handlers.Workplace.Queries;
+using DataAccess.Concrete.Enum;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AdminAPI.Controllers;
@@ -36,4 +37,9 @@ public class WorkplaceController : BaseApiController
     {
         return Ok(await Mediator.Send(deleteWorkplaceCommand));
     }
+    /*[HttpGet("{id}")]
+    public async Task<IActionResult> getstate(EducationLevelEnum abc)
+    {
+        return Ok(await Mediator.Send(new GetWorkplaceQuery(){Abc = abc}));
+    }*/
 }

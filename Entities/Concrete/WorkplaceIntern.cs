@@ -38,8 +38,6 @@ public class WorkplaceIntern:IEntity,IPassive,IDeletion
 
     [JsonIgnore]
     public Workplace Workplace { get; set; }
-    [JsonIgnore]
-    public ICollection<Intern> Interns { get; set; }
 
     #endregion
 

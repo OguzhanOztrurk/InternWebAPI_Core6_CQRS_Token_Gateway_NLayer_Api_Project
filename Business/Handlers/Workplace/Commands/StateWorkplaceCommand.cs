@@ -22,7 +22,8 @@ public class StateWorkplaceCommand:IRequest<IResponse>
         public async Task<IResponse> Handle(StateWorkplaceCommand request, CancellationToken cancellationToken)
         {
             _workplaceRepository.GetAdminControl(_currentRepository.UserId());
-           
+           _workplaceRepository.WorkplaceControl(request.WorkplaceId);
+           _workplaceRepository.AdminWordplaceControl(request.WorkplaceId,_currentRepository.UserId());
 
             var workplace = _workplaceRepository.Get(x => x.WorkplaceId == request.WorkplaceId);
             workplace.isActive =  !workplace.isActive;

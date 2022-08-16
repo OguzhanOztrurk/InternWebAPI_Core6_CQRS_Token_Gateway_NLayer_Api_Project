@@ -26,38 +26,143 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a189e0a-335c-484e-828d-7830a68ca4d6" name="Changes" comment="Tüm entityler ve ilişkiler">
-      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Seed/AdvertCategorySeed.cs" afterDir="false" />
+    <list default="true" id="4a189e0a-335c-484e-828d-7830a68ca4d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AdminAPI/Controllers/AdvertController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Advert/Command/CreateAdvertCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Advert/Command/DeleteAdvertCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Advert/Command/StateAdvertCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Advert/Command/UpdateAdvertCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Advert/Query/GetAdvertQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/IAdvertDetailRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/IAdvertRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/IAppealRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AdvertDetailRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AdvertRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AppealRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/Dto/AdvertWithAdvertDetailDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternWebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternWebAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/AdminAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/AdminAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/Controllers/WorkplaceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/Controllers/WorkplaceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/AdminAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/AdminAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/AdminAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/ref/AdminAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/ref/AdminAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/refint/AdminAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/refint/AdminAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdminAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Extensions/ServiceRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Extensions/ServiceRegistration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Handlers/Workplace/Commands/DeleteWorkplaceCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Workplace/Commands/DeleteWorkplaceCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Handlers/Workplace/Commands/StateWorkplaceCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Workplace/Commands/StateWorkplaceCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Handlers/Workplace/Commands/UpdateWorkplaceCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Workplace/Commands/UpdateWorkplaceCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Handlers/Workplace/Queries/GetWorkplaceQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Workplace/Queries/GetWorkplaceQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/Business.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Business.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/Business.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Business.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/Business.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/ref/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/ref/Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/refint/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/refint/Business.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Core.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Core.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Core.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/Debug/net6.0/Core.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/Debug/net6.0/Core.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/ICurrentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/ICurrentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IWorkplaceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IWorkplaceRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/AdvertCategoryConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/AdvertCategoryConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/AdvertConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/AdvertConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/AppealConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/AppealConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/EducationConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/EducationConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/TalentConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/TalentConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/WorkHistoryConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/WorkHistoryConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/WorkplaceConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/WorkplaceConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/WorkplaceInternConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Configurations/WorkplaceInternConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/Contexts/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/DataAccess.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/DataAccess.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20220815123909_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20220815123909_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Repository/CurrentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/CurrentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Repository/WorkplaceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/WorkplaceRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20220815125752_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/20220815125752_Initial.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/DataAccess.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/DataAccess.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Concrete/Intern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/Intern.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Concrete/WorkplaceIntern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/WorkplaceIntern.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Enum/EducationLevelEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Enum/EducationLevelEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/ref/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/ref/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/refint/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/refint/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Entities.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GatewayAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GatewayAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/IdentityAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/IdentityAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/IdentityAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/IdentityAPI.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,20 +222,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Compound.Admin">
     <configuration name="Admin" type="CompoundRunConfigurationType">
       <toRun name="AdminAPI" type="LaunchSettings" />
@@ -289,7 +394,9 @@
       <workItem from="1660297662428" duration="1190000" />
       <workItem from="1660298948489" duration="9520000" />
       <workItem from="1660310414885" duration="4775000" />
-      <workItem from="1660542706730" duration="23031000" />
+      <workItem from="1660542706730" duration="25256000" />
+      <workItem from="1660570608491" duration="5802000" />
+      <workItem from="1660628474730" duration="22652000" />
     </task>
     <task id="LOCAL-00001" summary="Library Project">
       <created>1659560201925</created>
@@ -382,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660567754977</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="entity seed eklemeleri">
+      <created>1660568349039</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660568349039</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,6 +538,11 @@
     <MESSAGE value="getaway last" />
     <MESSAGE value="Initial" />
     <MESSAGE value="Tüm entityler ve ilişkiler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tüm entityler ve ilişkiler" />
+    <MESSAGE value="entity seed eklemeleri" />
+    <option name="LAST_COMMIT_MESSAGE" value="entity seed eklemeleri" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

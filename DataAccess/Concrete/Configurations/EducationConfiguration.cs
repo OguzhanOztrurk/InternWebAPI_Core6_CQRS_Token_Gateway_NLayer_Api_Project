@@ -22,6 +22,16 @@ public class EducationConfiguration:IEntityTypeConfiguration<Education>
 
         #endregion
 
-        
+        #region Foreign Key
+
+        builder
+            .HasOne(x => x.Intern)
+            .WithMany(x => x.Education)
+            .HasForeignKey(x => x.InternId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        #endregion
+
+
     }
 }

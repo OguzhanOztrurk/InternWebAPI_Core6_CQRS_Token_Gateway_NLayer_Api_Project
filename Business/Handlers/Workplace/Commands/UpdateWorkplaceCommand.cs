@@ -27,6 +27,8 @@ public class UpdateWorkplaceCommand:IRequest<IResponse>
         public async Task<IResponse> Handle(UpdateWorkplaceCommand request, CancellationToken cancellationToken)
         {
             _workplaceRepository.GetAdminControl(_currentRepository.UserId());
+            _workplaceRepository.WorkplaceControl(request.WorkplaceId);
+            _workplaceRepository.AdminWordplaceControl(request.WorkplaceId,_currentRepository.UserId());
             
             
             var workplace = _workplaceRepository.Get(x => x.WorkplaceId == request.WorkplaceId);

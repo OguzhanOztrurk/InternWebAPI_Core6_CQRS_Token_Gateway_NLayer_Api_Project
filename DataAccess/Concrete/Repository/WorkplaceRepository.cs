@@ -12,19 +12,19 @@ public class WorkplaceRepository:EfEntityRepositoryBase<Workplace,AppDbContext>,
     {
     }
 
-    public void WorkplaceControl(Guid userId)
+    public void WorkplaceControl(int workplaceId)
     {
-        var result = Query().Any(x=>x.AdminId==userId && x.DeleteDate == null);
-        if (result)
+        var result = Query().Any(x => x.WorkplaceId == workplaceId && x.DeleteDate==null);
+        if (!result)
         {
-            throw new System.Exception("To add a new workplace, you must delete your current workplace.");
+            throw new System.Exception("Job not found");
         }
     }
 
     public async Task<IEnumerable<Workplace>> GetNotDeletedWorkplace(Guid userId)
     {
-        var result = Context.Workplaces.Where(x => x.AdminId == userId)
-            .Where(x => x.DeleteDate == null).ToList();
+        var result = Context.Workplaces.Where(x => x.AdminId == userId && x.DeleteDate == null);
+            
         return result;
     }
 
@@ -34,6 +34,15 @@ public class WorkplaceRepository:EfEntityRepositoryBase<Workplace,AppDbContext>,
         if (!result)
         {
             throw new System.Exception("You are not authorized to use this field");
+        }
+    }
+
+    public void AdminWordplaceControl(int wordplaceId, Guid userId)
+    {
+        var result = Query().Any(x => x.WorkplaceId == wordplaceId && x.AdminId == userId);
+        if (!result)
+        {
+            throw new System.Exception("You are not authorized for this action");
         }
     }
 }
