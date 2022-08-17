@@ -60,6 +60,7 @@ namespace Business.Extensions
                 .AddTransient<IAdvertRepository, AdvertRepository>()
                 .AddTransient<IAdvertDetailRepository,AdvertDetailRepository>()
                 .AddTransient<IInternRepository,InternRepository>()
+                .AddTransient<IAppealRepository,AppealRepository>()
                 ;
             
         }

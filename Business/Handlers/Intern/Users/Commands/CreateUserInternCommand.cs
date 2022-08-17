@@ -6,26 +6,24 @@ using MediatR;
 
 namespace Business.Handlers.Users.Commands;
 
-public class CreateUserAdminCommand:IRequest<IResponse>
+public class CreateUserInternCommand:IRequest<IResponse>
 {
     public string UserName { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string PassWord { get; set; }
-    
-    public class CreateUserAdminCommandHandler:IRequestHandler<CreateUserAdminCommand,IResponse>
+    public class CreateUserInternCommandHandler:IRequestHandler<CreateUserInternCommand,IResponse>
     {
         private readonly IUserRepository _userRepository;
-        private readonly IAdminRepository _adminRepository;
+        private readonly IInternRepository _internRepository;
 
-        public CreateUserAdminCommandHandler(IUserRepository userRepository, IAdminRepository adminRepository)
+        public CreateUserInternCommandHandler(IUserRepository userRepository, IInternRepository internRepository)
         {
             _userRepository = userRepository;
-            _adminRepository = adminRepository;
+            _internRepository = internRepository;
         }
 
-
-        public async Task<IResponse> Handle(CreateUserAdminCommand request, CancellationToken cancellationToken)
+        public async Task<IResponse> Handle(CreateUserInternCommand request, CancellationToken cancellationToken)
         {
             _userRepository.UserNameControl(request.UserName);
             CreatePasswordHash(request.PassWord, out var passwordHash, out var passwordSalt);
@@ -41,14 +39,12 @@ public class CreateUserAdminCommand:IRequest<IResponse>
             await _userRepository.SaveChangesAsync();
             
             
-            var newAdmin = new Admin();
-            newAdmin.UserId = newUser.UserId;
-            _adminRepository.Add(newAdmin);
-            await _adminRepository.SaveChangesAsync();
-
-            return new Response<User>(newUser);
+            var newIntern = new Entities.Concrete.Intern();
+            newIntern.UserId = newUser.UserId;
+            _internRepository.Add(newIntern);
+            await _internRepository.SaveChangesAsync();
             
-
+            return new Response<User>(newUser);
         }
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {

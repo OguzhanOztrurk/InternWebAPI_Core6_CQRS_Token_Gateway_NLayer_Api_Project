@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+
 using Core.Wrappers;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -12,30 +13,31 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Business.Handlers.Users.Queries;
 
-public class GetLoginAdminQuery:IRequest<IResponse>
+public class GetLoginUserInternQuery:IRequest<IResponse>
 {
+    
     public string UserName { get; set; }
     public string Password { get; set; }
     
-    public class GetLoginAdminQueryHandler:IRequestHandler<GetLoginAdminQuery,IResponse>
+    public class GetLoginUserInternQueryHandler:IRequestHandler<GetLoginUserInternQuery, IResponse>
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
 
-        public GetLoginAdminQueryHandler(IUserRepository userRepository, IConfiguration configuration)
+        public GetLoginUserInternQueryHandler(IUserRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
-            _configuration = configuration; 
+            _configuration = configuration;
         }
 
-        public async Task<IResponse> Handle(GetLoginAdminQuery request, CancellationToken cancellationToken)
+        public async Task<IResponse> Handle(GetLoginUserInternQuery request, CancellationToken cancellationToken)
         {
             var newUser = await _userRepository.GetAsync(x => x.UserName == request.UserName);
-            _userRepository.UserAdminControl(newUser.UserId);
+            _userRepository.UserInternControl(newUser.UserId);
 
             if (newUser == null) return new Response<User>(null,  "User information is incorrect");
             else if (!VerifyPasswordHash(request.Password, newUser.PasswordHash, newUser.PasswordSalt))
-                return new Response<User>(newUser,  "User information is incorrect");
+                return new Response<User>(null,  "User information is incorrect");
             _userRepository.UserDeleteControl(newUser.UserId);
             var newToken = new TokenDTO();
             newToken.Token = CreateToken(newUser);

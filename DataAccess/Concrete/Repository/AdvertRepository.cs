@@ -136,4 +136,103 @@ public class AdvertRepository:EfEntityRepositoryBase<Advert, AppDbContext>,IAdve
             }).FirstAsync();
         return result;
     }
+
+    public async Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertList()
+    {
+        var result = await (from advert in Context.Adverts
+            join workplace in Context.Workplaces on advert.WorkplaceId equals workplace.WorkplaceId
+            join user in Context.Users on workplace.AdminId equals user.UserId
+            join advertCategory in Context.AdvertCategories on advert.CategoryId equals advertCategory.CategoryId
+            where advert.DeleteDate==null &&
+                  advert.isActive==true &&
+                  workplace.DeleteDate==null &&
+                  workplace.isActive == true&&
+                  user.DeleteDate==null &&
+                  user.isActive==true &&
+                  advert.StartDate <= DateTime.Now &&
+                  advert.EndDate >= DateTime.Now
+                  select new ActiveAdvertListDTO()
+            {
+                AdvertId = advert.AdvertId,
+                CategoryId = advert.CategoryId,
+                WorkplaceId = advert.WorkplaceId,
+                WorkplaceName = workplace.WorkplaceName,
+                CategoryName = advertCategory.CategoryName,
+                AdvertName = advert.AdvertName,
+                AdvertSummary = advert.AdvertSummary,
+                StartDate = advert.StartDate,
+                EndDate = advert.EndDate,
+                Quota = advert.Quota,
+                CreatedDate = advert.CreatedDate
+                
+            }).ToListAsync();
+        return result;
+    }
+
+    public async Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertInCategoryList(int categoryId)
+    {
+        var result = await (from advert in Context.Adverts
+            join workplace in Context.Workplaces on advert.WorkplaceId equals workplace.WorkplaceId
+            join user in Context.Users on workplace.AdminId equals user.UserId
+            join advertCategory in Context.AdvertCategories on advert.CategoryId equals advertCategory.CategoryId
+            where advert.DeleteDate==null &&
+                  advert.isActive==true &&
+                  workplace.DeleteDate==null &&
+                  workplace.isActive == true&&
+                  user.DeleteDate==null &&
+                  user.isActive==true &&
+                  advert.CategoryId ==categoryId &&
+                  advert.StartDate <= DateTime.Now &&
+                  advert.EndDate >= DateTime.Now
+            select new ActiveAdvertListDTO()
+            {
+                AdvertId = advert.AdvertId,
+                CategoryId = advert.CategoryId,
+                WorkplaceId = advert.WorkplaceId,
+                WorkplaceName = workplace.WorkplaceName,
+                CategoryName = advertCategory.CategoryName,
+                AdvertName = advert.AdvertName,
+                AdvertSummary = advert.AdvertSummary,
+                StartDate = advert.StartDate,
+                EndDate = advert.EndDate,
+                Quota = advert.Quota,
+                CreatedDate = advert.CreatedDate
+                
+            }).ToListAsync();
+        return result;
+    }
+
+    public async Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertInWorkplaceList(int workplaceId)
+    {
+        var result = await (from advert in Context.Adverts
+            join workplace in Context.Workplaces on advert.WorkplaceId equals workplace.WorkplaceId
+            join user in Context.Users on workplace.AdminId equals user.UserId
+            join advertCategory in Context.AdvertCategories on advert.CategoryId equals advertCategory.CategoryId
+            where advert.DeleteDate==null &&
+                  advert.isActive==true &&
+                  workplace.DeleteDate==null &&
+                  workplace.isActive == true&&
+                  user.DeleteDate==null &&
+                  user.isActive==true &&
+                  advert.WorkplaceId == workplaceId &&
+                  advert.StartDate <= DateTime.Now &&
+                  advert.EndDate >= DateTime.Now
+            select new ActiveAdvertListDTO()
+            {
+                AdvertId = advert.AdvertId,
+                CategoryId = advert.CategoryId,
+                WorkplaceId = advert.WorkplaceId,
+                WorkplaceName = workplace.WorkplaceName,
+                CategoryName = advertCategory.CategoryName,
+                AdvertName = advert.AdvertName,
+                AdvertSummary = advert.AdvertSummary,
+                StartDate = advert.StartDate,
+                EndDate = advert.EndDate,
+                Quota = advert.Quota,
+                CreatedDate = advert.CreatedDate
+                
+            }).ToListAsync();
+        return result;
+    }
+
 }

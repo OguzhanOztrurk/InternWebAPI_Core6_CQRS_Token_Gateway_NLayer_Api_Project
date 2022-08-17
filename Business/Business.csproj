@@ -26,4 +26,10 @@
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Handlers\Admin\Appeal\Command" />
+    <Folder Include="Handlers\Intern\AdvertDetail\Commands" />
+    <Folder Include="Handlers\Intern\Advert\Commands" />
+  </ItemGroup>
+
 </Project>
