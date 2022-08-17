@@ -277,7 +277,7 @@ namespace DataAccess.Migrations
                     AppealId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AdvertId = table.Column<int>(type: "int", nullable: false),
-                    InternId = table.Column<int>(type: "int", nullable: false),
+                    InternId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     EvaluationState = table.Column<bool>(type: "bit", nullable: false),
                     isActive = table.Column<bool>(type: "bit", nullable: false),
                     DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true),

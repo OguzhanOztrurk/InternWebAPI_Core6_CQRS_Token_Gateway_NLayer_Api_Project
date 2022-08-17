@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220816124802_Initial")]
+    [Migration("20220816125634_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -220,8 +220,8 @@ namespace DataAccess.Migrations
                     b.Property<bool>("EvaluationState")
                         .HasColumnType("bit");
 
-                    b.Property<int>("InternId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("InternId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("isActive")
                         .HasColumnType("bit");

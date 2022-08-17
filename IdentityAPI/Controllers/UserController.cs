@@ -13,6 +13,13 @@ public class UserController : BaseApiController
     {
         return Ok(await Mediator.Send(new GetLoginAdminQuery() {UserName = userName, Password = password}));
     }
-    
-     
+
+    [AllowAnonymous]
+    [HttpGet("intern/login")]
+    public async Task<IActionResult> login(string userName, string password)
+    {
+        return Ok(await Mediator.Send(new GetLoginUserInternQuery() { UserName = userName, Password = password }));
+    }
+
+
 }

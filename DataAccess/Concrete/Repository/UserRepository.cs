@@ -38,8 +38,26 @@ public class UserRepository : EfEntityRepositoryBase<User, AppDbContext>, IUserR
         //Query().Any(x => x.DeleteDate != null);
         if (result)
         {
-            throw new System.Exception("Wrong Username");
+            throw new System.Exception("User information is incorrect");
         }
 
+    }
+
+    public void UserInternControl(Guid userId)
+    {
+        var result = Context.Interns.Any(x => x.UserId == userId);
+        if (!result)
+        {
+            throw new System.Exception("User information is incorrect.");
+        }
+    }
+
+    public void UserAdminControl(Guid userId)
+    {
+        var result = Context.Admins.Any(x => x.UserId == userId);
+        if (!result)
+        {
+            throw new System.Exception("User information is incorrect.");
+        }
     }
 }

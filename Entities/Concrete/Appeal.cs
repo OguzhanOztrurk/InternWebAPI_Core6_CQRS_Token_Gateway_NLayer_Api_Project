@@ -15,7 +15,7 @@ public class Appeal:IEntity,IPassive,IDeletion
     #region Columns
 
     public int AdvertId { get; set; }
-    public int InternId { get; set; }
+    public Guid InternId { get; set; }
     public bool EvaluationState { get; set; }
 
     #region Active

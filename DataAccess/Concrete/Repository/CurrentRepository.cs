@@ -30,4 +30,13 @@ public class CurrentRepository:EfEntityRepositoryBase<User,AppDbContext>,ICurren
                     throw new System.Exception("You are not authorized to use this field.");
                 }
     }
+
+    public void UserControl(Guid userId)
+    {
+        var result = Context.Interns.Where(x => x.UserId == userId).Any();
+        if (!result)
+        {
+            throw new System.Exception("You are not authorized to use this field.");
+        }
+    }
 }

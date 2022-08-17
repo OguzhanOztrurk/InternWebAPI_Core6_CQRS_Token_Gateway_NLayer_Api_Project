@@ -7,4 +7,5 @@ public interface ICurrentRepository:IEntityRepository<User>
 {
     Guid UserId();
     void AdminControl(Guid userId);
+    void UserControl(Guid userId);
 }

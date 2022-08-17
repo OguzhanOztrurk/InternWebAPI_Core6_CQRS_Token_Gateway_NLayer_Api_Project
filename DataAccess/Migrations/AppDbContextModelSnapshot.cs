@@ -218,8 +218,8 @@ namespace DataAccess.Migrations
                     b.Property<bool>("EvaluationState")
                         .HasColumnType("bit");
 
-                    b.Property<int>("InternId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("InternId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("isActive")
                         .HasColumnType("bit");
