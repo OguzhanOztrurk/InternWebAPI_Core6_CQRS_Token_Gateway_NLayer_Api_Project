@@ -26,18 +26,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a189e0a-335c-484e-828d-7830a68ca4d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Commands/CreateEducationCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Commands/DeleteEducationCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Commands/UpdateEducationCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Commands/UpdateEducationStateCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Queries/GetEducationQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/IEducationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/EducationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Entities/Dto/EducationDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserAPI/Controllers/EducationController.cs" afterDir="false" />
+    <list default="true" id="4a189e0a-335c-484e-828d-7830a68ca4d6" name="Changes" comment="Stajyer eğitim bilgisi yönetimi">
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Talent/Commands/CreateTalentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Talent/Commands/DeleteTalentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Talent/Commands/UpdateTalentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Talent/Commands/UpdateTalentStateCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Talent/Queries/GetTalentQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/ITalentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/TalentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/Dto/TalentDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAPI/Controllers/TalentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternWebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternWebAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Extensions/ServiceRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Extensions/ServiceRegistration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Commands/DeleteEducationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Education/Commands/DeleteEducationCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
@@ -60,7 +61,7 @@
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/DataAccess.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Concrete/Education.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/Education.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Concrete/Talent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/Talent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -68,18 +69,6 @@
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/ref/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/ref/Entities.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/refint/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/refint/Entities.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Business.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/DataAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/bin/Debug/net6.0/IdentityAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
@@ -336,7 +325,7 @@
       <workItem from="1660570608491" duration="5802000" />
       <workItem from="1660628474730" duration="28975000" />
       <workItem from="1660714839628" duration="28130000" />
-      <workItem from="1660801614749" duration="6001000" />
+      <workItem from="1660801614749" duration="9335000" />
     </task>
     <task id="LOCAL-00001" summary="Library Project">
       <created>1659560201925</created>
@@ -457,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660749266380</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Stajyer eğitim bilgisi yönetimi">
+      <created>1660807921968</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1660807921968</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +500,8 @@
     <MESSAGE value="Stajyer login işlemleri tamamlandı" />
     <MESSAGE value="Stajyer ilanları ve detaylarını görüntüleme işlemleri" />
     <MESSAGE value="Stajyer başvurularını görüntüleme işlemleri" />
-    <option name="LAST_COMMIT_MESSAGE" value="Stajyer başvurularını görüntüleme işlemleri" />
+    <MESSAGE value="Stajyer eğitim bilgisi yönetimi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stajyer eğitim bilgisi yönetimi" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

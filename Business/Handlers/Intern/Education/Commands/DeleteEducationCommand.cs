@@ -31,7 +31,7 @@ public class DeleteEducationCommand:IRequest<IResponse>
             _educationRepository.Update(education);
             await _educationRepository.SaveChangesAsync();
 
-            return new Response<object>(null, "Appeal has been deleted");
+            return new Response<object>(null, "Has been deleted");
         }
     }
 }
