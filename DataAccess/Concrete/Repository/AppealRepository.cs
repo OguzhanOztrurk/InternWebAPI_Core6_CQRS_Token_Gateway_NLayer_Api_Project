@@ -66,7 +66,7 @@ public class AppealRepository:EfEntityRepositoryBase<Appeal, AppDbContext>,IAppe
         return result;
     }
 
-    public Guid GetAppealInternInfo(int appealId, Guid adminId)
+    public Guid GetAppealInternId(int appealId, Guid adminId)
     { 
         var result =   Query().Include(_ => _.Advert)
             .ThenInclude(_ => _.Workplace)
@@ -76,4 +76,73 @@ public class AppealRepository:EfEntityRepositoryBase<Appeal, AppDbContext>,IAppe
         return result.Result;
 
     }
+
+    public async Task<IEnumerable<EducationDTO>> GetInternEducations(Guid userId)
+    {
+        var result = await Context.Educations.Where(x => x.InternId == userId && x.isActive == true && x.DeleteDate == null)
+            .Select(x => new EducationDTO()
+                {
+                    SchoolName = x.SchoolName,
+                    EducationLevelEnum = x.EducationLevelEnum,
+                    EducationStateEnum = x.EducationStateEnum,
+                    StartYear = x.StartYear,
+                    EndYear = x.EndYear
+                }
+            ).ToListAsync();
+        return result;
+    }
+
+    public async Task<IEnumerable<TalentDTO>> GetInternTalents(Guid userId)
+    {
+        var result =
+            await Context.Talents.Where(x => x.InternId == userId && x.isActive == true && x.DeleteDate == null)
+                .Select(x => new TalentDTO()
+                {
+                    TalentName = x.TalentName,
+                    TalentExplanation = x.TalentExplanation,
+                    TalentLevelEnum = x.TalentLevelEnum
+                }).ToListAsync();
+        return result;
+    }
+
+    public async Task<IEnumerable<WorkHistoryDTO>> GetInternWorkHistories(Guid userId)
+    {
+        var result = await Context.WorkHistories
+            .Where(x => x.InternId == userId && x.isActive == true && x.DeleteDate == null)
+            .Select(x => new WorkHistoryDTO()
+            {
+                WorkplaceName = x.WorkplaceName,
+                OperationTime = x.OperationTime,
+                WorkStateEnum = x.WorkStateEnum
+            }).ToListAsync();
+        return result;
+    }
+
+    public async Task<AppealInternInfoDTO> GetInternInfo(Guid adminId, int appealId)
+    {
+        var internId = GetAppealInternId(appealId, adminId);
+        
+        var intern = await Context.Users.Include(x => x.Intern)
+            .Where(x => x.UserId == internId && x.DeleteDate == null).FirstAsync();
+        var education = await GetInternEducations(internId);
+        var talent = await GetInternTalents(internId);
+        var workHistory = await GetInternWorkHistories(internId);
+
+        AppealInternInfoDTO result = new AppealInternInfoDTO();
+        result.InternId = intern.UserId;
+        result.UserName = intern.UserName;
+        result.FirstName = intern.FirstName;
+        result.LastName = intern.LastName;
+        result.Number = intern.Number;
+        result.Email = intern.Email;
+        result.Adress = intern.Intern.Adress;
+
+        result.EducationDtos = education;
+        result.TalentDtos = talent;
+        result.WorkHistoryDtos = workHistory;
+
+        return result;
+
+    }
+    
 }
