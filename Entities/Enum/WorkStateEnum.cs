@@ -2,6 +2,6 @@ namespace DataAccess.Concrete.Enum;
 
 public enum WorkStateEnum
 {
-    Continues,
-    Left
+    Continues=1,
+    Left=2
 }

@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using DataAccess.Concrete.Enum;
 using Entities.Base;
 using Entities.Base.GenericEntity;
@@ -26,15 +27,16 @@ public class WorkHistory:IEntity,IPassive,IDeletion
     #endregion
 
     #region Delete
-    
-    public DateTime? DeleteDate { get; set; }
+    [JsonIgnore]
+    public DateTime? DeleteDate { get; set;}
+    [JsonIgnore]
     public Guid? DeleteUserId { get; set; }
 
     #endregion
     #endregion
 
     #region Foreign Key
-
+    [JsonIgnore]
     public Intern Intern { get; set; }
 
     #endregion

@@ -32,7 +32,7 @@ public class WorkplaceController : BaseApiController
         return Ok(await Mediator.Send(stateWorkplaceCommand));
     }
 
-    [HttpPut("delete")]
+    [HttpDelete]
     public async Task<IActionResult> DeleteWorkplace([FromBody] DeleteWorkplaceCommand deleteWorkplaceCommand)
     {
         return Ok(await Mediator.Send(deleteWorkplaceCommand));

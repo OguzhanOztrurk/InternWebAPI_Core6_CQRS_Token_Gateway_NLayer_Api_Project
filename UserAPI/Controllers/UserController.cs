@@ -33,7 +33,7 @@ public class UserController : BaseApiController
         return Ok(await Mediator.Send(updateInternPassCommand));
     }
 
-    [HttpPut("admin/delete")]
+    [HttpDelete]
     public async Task<IActionResult> DeleteIntern([FromBody] DeleteUserInternCommand deleteUserInternCommand)
     {
         return Ok(await Mediator.Send(deleteUserInternCommand));

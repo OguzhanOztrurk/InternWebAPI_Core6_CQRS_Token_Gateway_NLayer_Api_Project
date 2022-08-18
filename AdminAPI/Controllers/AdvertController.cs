@@ -31,7 +31,7 @@ public class AdvertController : BaseApiController
         return Ok(await Mediator.Send(stateAdvertCommand));
     }
 
-    [HttpPut("delete")]
+    [HttpDelete]
     public async Task<IActionResult> DeleteAdvert([FromBody] DeleteAdvertCommand deleteAdvertCommand)
     {
         return Ok(await Mediator.Send(deleteAdvertCommand));
