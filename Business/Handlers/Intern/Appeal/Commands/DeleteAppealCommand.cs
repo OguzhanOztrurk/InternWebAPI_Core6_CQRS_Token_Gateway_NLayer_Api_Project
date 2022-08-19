@@ -1,5 +1,6 @@
 using Core.Wrappers;
 using DataAccess.Abstract;
+using DataAccess.Concrete.Enum;
 using MediatR;
 
 namespace Business.Handlers.Intern.Appeal.Commands;
@@ -26,6 +27,7 @@ public class DeleteAppealCommand:IRequest<IResponse>
             var appeal = await _appealRepository.GetAsync(x => x.AppealId == request.AppealId);
             appeal.DeleteDate=DateTime.Now;
             appeal.DeleteUserId = _currentRepository.UserId();
+            appeal.EvaluationStateEnum = EvaluationStateEnum.Cancel;
 
             _appealRepository.Update(appeal);
             await _appealRepository.SaveChangesAsync();

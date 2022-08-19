@@ -26,7 +26,7 @@ public class WorkplaceController : BaseApiController
         return Ok(await Mediator.Send(updateWorkplaceCommand));
     }
 
-    [HttpPut("state")]
+    [HttpPut("isactive")]
     public async Task<IActionResult> UpdateState([FromBody] StateWorkplaceCommand stateWorkplaceCommand)
     {
         return Ok(await Mediator.Send(stateWorkplaceCommand));

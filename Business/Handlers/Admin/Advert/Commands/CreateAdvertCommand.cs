@@ -44,7 +44,8 @@ public class CreateAdvertCommand:IRequest<IResponse>
             _currentRepository.AdminControl(_currentRepository.UserId());
             _advertRepository.WorkplaceControl(request.WorkplaceId);
             _advertRepository.AdminWorkplaceControl(request.WorkplaceId, _currentRepository.UserId());
-
+            _advertRepository.AdvertStartDateControl(request.StartDate,request.EndDate);
+            
             var advert = new Entities.Concrete.Advert();
             advert.WorkplaceId = request.WorkplaceId;
             advert.CategoryId = request.CategoryId;

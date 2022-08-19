@@ -14,6 +14,8 @@ public interface IAdvertRepository:IEntityRepository<Advert>
     void AdvertControl(int advertId);
     void AdvertWorkplaceActive(int advertId);
 
+    void AdvertStartDateControl(DateTime startDate, DateTime endDate);
+
     Task<AdvertWithAdvertDetailDTO> GetAdvert(int advertId);
     Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertList();
     Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertInCategoryList(int categoryId);

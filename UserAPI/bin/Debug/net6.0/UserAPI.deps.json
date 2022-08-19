@@ -47,6 +47,14 @@
           }
         }
       },
+      "Ardalis.SmartEnum/2.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.dll": {
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
+          }
+        }
+      },
       "Castle.Core/4.4.1": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -1601,6 +1609,7 @@
       "Business/1.0.0": {
         "dependencies": {
           "Abp": "7.0.1",
+          "Ardalis.SmartEnum": "2.1.0",
           "Core": "1.0.0",
           "DataAccess": "1.0.0",
           "FluentValidation.AspNetCore": "10.3.6",
@@ -1631,6 +1640,7 @@
       },
       "DataAccess/1.0.0": {
         "dependencies": {
+          "Ardalis.SmartEnum": "2.1.0",
           "Entities": "1.0.0",
           "Hellang.Middleware.ProblemDetails": "5.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
@@ -1647,6 +1657,7 @@
       },
       "Entities/1.0.0": {
         "dependencies": {
+          "Ardalis.SmartEnum": "2.1.0",
           "Hellang.Middleware.ProblemDetails": "5.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.0",
@@ -1672,6 +1683,13 @@
       "sha512": "sha512-ANmrLdGkJ0FFPAAifkBv+gWjRm56hdYbDANc1zuswggzXOdfqKq4FQg5uY8m7MWl5A42lkAfG+PdZFwFo54+6A==",
       "path": "abp/7.0.1",
       "hashPath": "abp.7.0.1.nupkg.sha512"
+    },
+    "Ardalis.SmartEnum/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RY3BulzPKbcwGhsY/gYkn8sPQtbipF6XheDHbW/TSVUtyFJ/FKTnY2Tx+34WLL5+e/9UnSQcGd3dOqpdN1QzKA==",
+      "path": "ardalis.smartenum/2.1.0",
+      "hashPath": "ardalis.smartenum.2.1.0.nupkg.sha512"
     },
     "Castle.Core/4.4.1": {
       "type": "package",

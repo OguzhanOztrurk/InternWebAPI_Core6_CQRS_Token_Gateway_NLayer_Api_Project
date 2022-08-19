@@ -25,7 +25,7 @@ public class AdvertController : BaseApiController
         return Ok(await Mediator.Send(updateAdvertCommand));
     }
 
-    [HttpPut("state")]
+    [HttpPut("isactive")]
     public async Task<IActionResult> StateChange([FromBody] StateAdvertCommand stateAdvertCommand)
     {
         return Ok(await Mediator.Send(stateAdvertCommand));

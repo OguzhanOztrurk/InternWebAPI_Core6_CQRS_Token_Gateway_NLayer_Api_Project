@@ -12,13 +12,13 @@ public class AdvertController : BaseApiController
         return Ok(await Mediator.Send(new GetAdvertsQuery()));
     }
 
-    [HttpGet("category")]
+    [HttpGet("category/advert")]
     public async Task<IActionResult> GetCategoryInAdvert(int categoryId)
     {
         return Ok(await Mediator.Send(new GetAdvertInCategoryQuery(){CategoryId = categoryId}));
     }
 
-    [HttpGet("workplace")]
+    [HttpGet("workplace/advert")]
     public async Task<IActionResult> GetWorkplaceInAdvert(int workplaceId)
     {
         return Ok(await Mediator.Send(new GetAdvertsInWorkplaceQuery() { WorkplaceId = workplaceId }));

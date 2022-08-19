@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UcAYWw5sdplRLtIRIauFRBrjomdZzUL+wEyqc7HlEXYCjQZtSZh/JYPfrrBxeYn+qu7LoBKZL/sw76aFMZ5LkA==",
+  "dgSpecHash": "+J0kmLb2ab7VapKFLGqJKPEfKtclNK7qj9wokfLzZmfmsw3GKKl9HOFsEpMeF9wujyDOua4Bgfdqgr6MLEeNxg==",
   "success": true,
   "projectFilePath": "C:\\Users\\trabz\\Desktop\\Projeler\\2. Staj Projesi\\InternWebApi\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\trabz\\.nuget\\packages\\ardalis.smartenum\\2.1.0\\ardalis.smartenum.2.1.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\hellang.middleware.problemdetails\\5.0.0\\hellang.middleware.problemdetails.5.0.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",

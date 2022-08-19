@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using DataAccess.Concrete.Enum;
 using Entities.Base;
 using Entities.Base.GenericEntity;
 
@@ -16,7 +17,7 @@ public class Appeal:IEntity,IPassive,IDeletion
 
     public int AdvertId { get; set; }
     public Guid InternId { get; set; }
-    public bool EvaluationState { get; set; }
+    public EvaluationStateEnum EvaluationStateEnum { get; set; }
 
     #region Active
 

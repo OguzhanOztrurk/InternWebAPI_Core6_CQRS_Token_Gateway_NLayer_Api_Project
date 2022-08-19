@@ -22,7 +22,7 @@ public class EducationController : BaseApiController
     {
         return Ok(await Mediator.Send(updateEducationCommand));
     }
-    [HttpPut("state")]
+    [HttpPut("isactive")]
     public async Task<IActionResult> EducationUpdateState(int educationId)
     {
         return Ok(await Mediator.Send(new UpdateEducationStateCommand(){EducationId = educationId}));

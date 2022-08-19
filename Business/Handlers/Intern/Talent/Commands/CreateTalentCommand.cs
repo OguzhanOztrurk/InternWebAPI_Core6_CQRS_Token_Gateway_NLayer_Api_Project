@@ -26,6 +26,8 @@ public class CreateTalentCommand:IRequest<IResponse>
         {
             _currentRepository.UserControl(_currentRepository.UserId());
 
+            
+            
             var talent = new Entities.Concrete.Talent();
             talent.InternId = _currentRepository.UserId();
             talent.TalentName = request.TalentName;

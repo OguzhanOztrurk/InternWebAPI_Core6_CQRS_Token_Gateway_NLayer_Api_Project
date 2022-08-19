@@ -22,7 +22,7 @@ public class TalentController : BaseApiController
     {
         return Ok(await Mediator.Send(updateTalentCommand));
     }
-    [HttpPut("state")]
+    [HttpPut("isactive")]
     public async Task<IActionResult> UpdateTalentState(int talentId)
     {
         return Ok(await Mediator.Send(new UpdateTalentStateCommand(){TalentId = talentId}));

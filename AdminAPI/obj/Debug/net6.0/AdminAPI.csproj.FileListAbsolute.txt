@@ -267,3 +267,4 @@ C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\AdminAPI\obj\Debug\
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\AdminAPI\obj\Debug\net6.0\AdminAPI.pdb
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\AdminAPI\obj\Debug\net6.0\AdminAPI.genruntimeconfig.cache
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\AdminAPI\obj\Debug\net6.0\ref\AdminAPI.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\AdminAPI\bin\Debug\net6.0\Ardalis.SmartEnum.dll

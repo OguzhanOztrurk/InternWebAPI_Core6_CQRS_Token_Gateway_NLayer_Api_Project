@@ -1,6 +1,7 @@
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.EntityFramework.Contexts;
+using DataAccess.Concrete.Enum;
 using Entities.Concrete;
 using Entities.Dto;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,28 @@ public class AppealRepository:EfEntityRepositoryBase<Appeal, AppDbContext>,IAppe
         if (!result)
         {
             throw new System.Exception("Appeal not found.");
+        }
+    }
+
+    public void InternStudyStateControl(Guid internId)
+    {
+        /*var result =
+            Context.WorkplaceInterns.Any(x => x.InternId == internId && x.isActive == true && x.DeleteDate == null);
+        if (result)
+        {
+            throw new System.Exception("You are currently actively interning at another workplace.");
+        }*/
+        throw new System.Exception("");
+    }
+
+    public void AppealStateControl(int appealId, Guid internId)
+    {
+        var result = Query().Any(x =>
+            x.AppealId == appealId && x.InternId == internId && x.DeleteDate == null &&
+            x.EvaluationStateEnum == EvaluationStateEnum.Waiting);
+        if (!result)
+        {
+            throw new System.Exception("Ad not found");
         }
     }
 

@@ -1,5 +1,6 @@
 using Core.Wrappers;
 using DataAccess.Abstract;
+using DataAccess.Concrete.Enum;
 using MediatR;
 
 namespace Business.Handlers.Intern.Appeal.Commands;
@@ -27,11 +28,12 @@ public class CreateAppealCommand:IRequest<IResponse>
             
             _appealRepository.AdvertAppealControl(request.AdvertId);
             _appealRepository.AppealControl(_currentRepository.UserId(),request.AdvertId);
+            //_appealRepository.InternStudyStateControl(_currentRepository.UserId());
 
             var appeal = new Entities.Concrete.Appeal();
             appeal.AdvertId = request.AdvertId;
             appeal.InternId = _currentRepository.UserId();
-            appeal.EvaluationState = false;
+            appeal.EvaluationStateEnum = EvaluationStateEnum.Waiting;
             appeal.isActive = true;
 
             _appealRepository.Add(appeal);

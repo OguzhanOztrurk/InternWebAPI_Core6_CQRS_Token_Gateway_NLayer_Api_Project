@@ -52,6 +52,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Hellang.Middleware.ProblemDetails": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -154,6 +158,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Hellang.Middleware.ProblemDetails": {
               "target": "Package",
               "version": "[5.0.0, )"

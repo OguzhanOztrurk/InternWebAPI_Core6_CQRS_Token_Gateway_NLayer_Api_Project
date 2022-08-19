@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Ardalis.SmartEnum/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.dll": {}
+        }
+      },
       "Hellang.Middleware.ProblemDetails/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -817,6 +826,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Ardalis.SmartEnum": "2.1.0",
           "Hellang.Middleware.ProblemDetails": "5.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.0",
@@ -834,6 +844,20 @@
     }
   },
   "libraries": {
+    "Ardalis.SmartEnum/2.1.0": {
+      "sha512": "RY3BulzPKbcwGhsY/gYkn8sPQtbipF6XheDHbW/TSVUtyFJ/FKTnY2Tx+34WLL5+e/9UnSQcGd3dOqpdN1QzKA==",
+      "type": "package",
+      "path": "ardalis.smartenum/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ardalis.smartenum.2.1.0.nupkg.sha512",
+        "ardalis.smartenum.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Ardalis.SmartEnum.dll",
+        "lib/netstandard2.0/Ardalis.SmartEnum.xml"
+      ]
+    },
     "Hellang.Middleware.ProblemDetails/5.0.0": {
       "sha512": "Okfz+AaiYwJkTwRguxSZyt6JA0lzKHDAtRlhZEQ6oYjjZ63baCuhkUADPD4PISSAUttfQVJX5PfxIRUzMpCqgg==",
       "type": "package",
@@ -2345,6 +2369,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Ardalis.SmartEnum >= 2.1.0",
       "Entities >= 1.0.0",
       "Hellang.Middleware.ProblemDetails >= 5.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
@@ -2410,6 +2435,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Ardalis.SmartEnum": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
           "Hellang.Middleware.ProblemDetails": {
             "target": "Package",
             "version": "[5.0.0, )"

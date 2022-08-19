@@ -15,19 +15,19 @@ public class UserController : BaseApiController
         return Created("", await Mediator.Send(createUserAdminCommand));
     }
 
-    [HttpGet("admin")]
+    [HttpGet("info")]
     public async Task<IActionResult> GetAdminInfo()
     {
         return Ok(await Mediator.Send(new GetUserAdminQuery()));
     }
 
-    [HttpPut("admin/update")]
+    [HttpPut("update")]
     public async Task<IActionResult> UpdateAdmin([FromBody] UpdateUserAdminCommand updateUserAdminCommand)
     {
         return Ok(await Mediator.Send(updateUserAdminCommand));
     }
 
-    [HttpPut("admin/update/password")]
+    [HttpPut("password")]
     public async Task<IActionResult> UpdatePassword([FromBody] UpdateAdminPassCommand updateAdminPassCommand)
     {
         return Ok(await Mediator.Send(updateAdminPassCommand));

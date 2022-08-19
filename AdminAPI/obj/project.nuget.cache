@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7A/seih1ntq/G+ymNG/x/DqIeMYjSJKXNavBgNJTBcn/L62hFV1mmpEOwiNE5E7aEhwX3YXpXu/wkWNFt6Lh6w==",
+  "dgSpecHash": "GHZS+PiUT7KZPyNSFXVQ0gL2cjEqmu/ufpbsH8bKY/Bw14008lVp/MVehNxobtKmeiyaE4EKz4c6SOGNg1r8lQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\trabz\\Desktop\\Projeler\\2. Staj Projesi\\InternWebApi\\AdminAPI\\AdminAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\trabz\\.nuget\\packages\\abp\\7.0.1\\abp.7.0.1.nupkg.sha512",
+    "C:\\Users\\trabz\\.nuget\\packages\\ardalis.smartenum\\2.1.0\\ardalis.smartenum.2.1.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\castle.core.asyncinterceptor\\2.0.0\\castle.core.asyncinterceptor.2.0.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\castle.loggingfacility\\5.1.1\\castle.loggingfacility.5.1.1.nupkg.sha512",

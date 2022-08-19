@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using DataAccess.Concrete.Enum;
 using Entities.Base;
 using Entities.Base.GenericEntity;
 
@@ -16,7 +17,7 @@ public class AppealEvaluation:IEntity,IPassive
 
     public string Conclusion { get; set; }
     public string ConclusionDetail { get; set; }
-    public bool InternApproval { get; set; }
+    public EvaluationStateEnum EvaluationStateEnum { get; set; }
 
     #region Active
 

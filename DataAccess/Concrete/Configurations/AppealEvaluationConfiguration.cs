@@ -18,5 +18,6 @@ public class AppealEvaluationConfiguration:IEntityTypeConfiguration<AppealEvalua
             .WithOne(x => x.AppealEvaluation)
             .HasForeignKey<AppealEvaluation>(x => x.AppealId)
             .OnDelete(DeleteBehavior.Restrict);
+            
     }
 }

@@ -18,7 +18,13 @@ public class AppealController : BaseApiController
     {
         return Created( "",await Mediator.Send(new CreateAppealCommand(){AdvertId = advertId}));
     }
-
+    
+    [HttpPut]
+    public async Task<IActionResult> UpdateAppealState(int appealId)
+    {
+        return Created( "",await Mediator.Send(new UpdateAppealStateCommand(){AppealId = appealId}));
+    }
+    
     [HttpDelete]
     public async Task<IActionResult> AppealDelete(int appealId)
     {

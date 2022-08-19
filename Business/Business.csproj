@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Abp" Version="7.0.1" />
+    <PackageReference Include="Ardalis.SmartEnum" Version="2.1.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
     <PackageReference Include="Hellang.Middleware.ProblemDetails" Version="5.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
@@ -27,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Admin\Appeal\Command" />
     <Folder Include="Handlers\Intern\AdvertDetail\Commands" />
     <Folder Include="Handlers\Intern\Advert\Commands" />
   </ItemGroup>
