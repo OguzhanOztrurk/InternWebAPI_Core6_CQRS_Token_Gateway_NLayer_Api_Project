@@ -1,5 +1,6 @@
 using Core.Wrappers;
 using DataAccess.Abstract;
+using DataAccess.Concrete.Enum;
 using MediatR;
 
 namespace Business.Handlers.Intern.Appeal.Queries;
@@ -20,7 +21,7 @@ public class GetAppealQuery:IRequest<IResponse>
         public async Task<IResponse> Handle(GetAppealQuery request, CancellationToken cancellationToken)
         {
             _currentRepository.UserControl(_currentRepository.UserId());
-            var appeals = await _appealRepository.GetListAsync(x => x.InternId == _currentRepository.UserId() && x.isActive==true && x.DeleteDate==null);
+            var appeals = await _appealRepository.GetListAsync(x => x.InternId == _currentRepository.UserId() && x.EvaluationStateEnum != EvaluationStateEnum.Cancel && x.EvaluationStateEnum!=EvaluationStateEnum.Denied && x.DeleteDate==null);
 
             return new Response<IEnumerable<Entities.Concrete.Appeal>>(appeals);
         }

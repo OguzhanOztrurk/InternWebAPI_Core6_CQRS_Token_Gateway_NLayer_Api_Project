@@ -32,7 +32,8 @@ public class AppealEvaluationRepository:EfEntityRepositoryBase<AppealEvaluation,
                 join admin in Context.Admins on workplace.AdminId equals admin.UserId
                 where
                       appeal.EvaluationStateEnum == EvaluationStateEnum.Approved &&
-                      admin.UserId == adminId
+                      admin.UserId == adminId &&
+                      appeal.DeleteDate==null
                 select new AppealEvaluation()
                 {
                     AppealId = appeal.AppealId,
@@ -102,5 +103,35 @@ public class AppealEvaluationRepository:EfEntityRepositoryBase<AppealEvaluation,
             throw new System.Exception("Only assessments that have been completed can be deleted.");
         }
 
+    }
+
+    public void AppealEvaluationInternConfirmControl(int appealId, Guid userId)
+    {
+        var result = Query().Include(x => x.Appeal)
+            .Any(x => x.isActive == true && x.EvaluationStateEnum == EvaluationStateEnum.Waiting &&
+                      x.Appeal.InternId == userId);
+        if (!result)
+        {
+            throw new System.Exception("No Records Found");
+        }
+    }
+
+    public int GetAppealWorkplaceId(int appealId)
+    {
+        var result =  Context.Appeals.Include(x => x.Advert)
+            .ThenInclude(x => x.Workplace)
+            .Where(x => x.AppealId == appealId && x.Advert.AdvertId == x.AdvertId &&
+                        x.Advert.Workplace.WorkplaceId == x.Advert.AdvertId)
+            .Select(x => x.Advert.Workplace.WorkplaceId).First();
+        return result;
+    }
+
+    public  int GetAdvertId(int appealId)
+    {
+        var result = Context.Appeals.Include(x => x.Advert)
+            .Where(x => x.AppealId == appealId &&
+                        x.Advert.AdvertId == x.AdvertId)
+            .Select(x => x.Advert.AdvertId).First();
+        return result;
     }
 }

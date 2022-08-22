@@ -51,13 +51,13 @@ public class AppealRepository:EfEntityRepositoryBase<Appeal, AppDbContext>,IAppe
 
     public void InternStudyStateControl(Guid internId)
     {
-        /*var result =
+        var result =
             Context.WorkplaceInterns.Any(x => x.InternId == internId && x.isActive == true && x.DeleteDate == null);
         if (result)
         {
             throw new System.Exception("You are currently actively interning at another workplace.");
-        }*/
-        throw new System.Exception("");
+        }
+        
     }
 
     public void AppealStateControl(int appealId, Guid internId)

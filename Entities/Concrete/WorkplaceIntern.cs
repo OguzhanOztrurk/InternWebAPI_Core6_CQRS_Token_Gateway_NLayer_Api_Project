@@ -15,8 +15,10 @@ public class WorkplaceIntern:IEntity,IPassive,IDeletion
     #region Columns
 
     public int WorkplaceId { get; set; }
-    public int InternId { get; set; }
+    public Guid InternId { get; set; }
     public DateTime AcceptDate { get; set; }
+    
+    [JsonIgnore] public int AdvertId { get; set; }
 
     #region Active
 

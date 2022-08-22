@@ -65,6 +65,7 @@ namespace Business.Extensions
                 .AddTransient<ITalentRepository,TalentRepository>()
                 .AddTransient<IWorkHistoryRepository, WorkHistoryRepository>()
                 .AddTransient<IAppealEvaluationRepository,AppealEvaluationRepository>()
+                .AddTransient<IWorkplaceInternRepository, WorkplaceInternRepository>()
                 ;
             
         }

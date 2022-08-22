@@ -11,4 +11,7 @@ public interface IAppealEvaluationRepository:IEntityRepository<AppealEvaluation>
     void AppealEvaluationAdminControl(int appealId, Guid adminId);
     Task<IEnumerable<AppealEvaluation>> GetAppealEvaluationIntern(Guid internId);
     void AppealEvaluationInternControl(int appealId, Guid internId);
+    void AppealEvaluationInternConfirmControl(int appealId, Guid userId);
+    int GetAppealWorkplaceId(int appealId);
+    int GetAdvertId(int appealId);
 }

@@ -14,7 +14,14 @@ public class AppealEvaluationController : BaseApiController
     {
         return Ok(await Mediator.Send(new GetAppealEvaluationQuery()));
     }
-    
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateAppealEvulation(int appealId, bool AppealEvaluationState)
+    {
+        return Ok(await Mediator.Send(new UpdateAppealEvulationCommand()
+            { AppealId = appealId, AppealEvulationStatus = AppealEvaluationState }));
+    }
+
     [HttpDelete]
     public async Task<IActionResult> DeleteAppealEvaluation(int appealId)
     {
