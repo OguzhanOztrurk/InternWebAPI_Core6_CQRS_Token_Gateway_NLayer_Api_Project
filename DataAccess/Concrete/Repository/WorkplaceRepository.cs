@@ -2,6 +2,7 @@ using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.EntityFramework.Contexts;
 using Entities.Concrete;
+using Entities.Dto;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.Repository;
@@ -44,5 +45,24 @@ public class WorkplaceRepository:EfEntityRepositoryBase<Workplace,AppDbContext>,
         {
             throw new System.Exception("You are not authorized for this action");
         }
+    }
+
+    public async Task<IEnumerable<WorkplaceDTO>> GetWorkplaceAndAdminControl()
+    {
+        var result = await Query().Include(x => x.Admin)
+            .Where(x => x.isActive == true &&
+                        x.DeleteDate == null &&
+                        x.Admin.User.isActive == true &&
+                        x.Admin.User.DeleteDate == null)
+            .Select(x => new WorkplaceDTO()
+            {
+                WorkplaceId = x.WorkplaceId,
+                WorkplaceName = x.WorkplaceName,
+                WorkplaceExplanation = x.WorkplaceExplanation,
+                EmployeesCount = x.EmployeesCount,
+                Vision = x.Vision,
+                Mission = x.Mission
+            }).ToListAsync();
+        return result;
     }
 }

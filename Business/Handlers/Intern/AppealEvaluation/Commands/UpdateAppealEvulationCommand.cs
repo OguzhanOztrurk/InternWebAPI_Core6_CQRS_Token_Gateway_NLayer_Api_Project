@@ -15,18 +15,23 @@ public class UpdateAppealEvulationCommand:IRequest<IResponse>
         private readonly ICurrentRepository _currentRepository;
         private readonly IAppealEvaluationRepository _appealEvaluationRepository;
         private readonly IWorkplaceInternRepository _workplaceInternRepository;
+        private readonly IAppealRepository _appealRepository;
 
-        public UpdateAppealEvulationCommandHandler(ICurrentRepository currentRepository, IAppealEvaluationRepository appealEvaluationRepository, IWorkplaceRepository workplaceRepository, IWorkplaceInternRepository workplaceInternRepository)
+        public UpdateAppealEvulationCommandHandler(ICurrentRepository currentRepository, IAppealEvaluationRepository appealEvaluationRepository, IWorkplaceRepository workplaceRepository, IWorkplaceInternRepository workplaceInternRepository, IAppealRepository appealRepository)
         {
             _currentRepository = currentRepository;
             _appealEvaluationRepository = appealEvaluationRepository;
             _workplaceInternRepository = workplaceInternRepository;
+            _appealRepository = appealRepository;
         }
 
         public async Task<IResponse> Handle(UpdateAppealEvulationCommand request, CancellationToken cancellationToken)
         {
             _currentRepository.UserControl(_currentRepository.UserId());
             _appealEvaluationRepository.AppealEvaluationInternConfirmControl(request.AppealId, _currentRepository.UserId());
+            _appealRepository.InternStudyStateControl(_currentRepository.UserId());
+            var getAdvertId = await _appealRepository.GetAsync(x => x.AppealId == request.AppealId);
+            _appealRepository.InternAppealQuotaControl(getAdvertId.AdvertId);
 
             var appealEvuluationEnum = EvaluationStateEnum.Waiting;
             if (request.AppealEvulationStatus)

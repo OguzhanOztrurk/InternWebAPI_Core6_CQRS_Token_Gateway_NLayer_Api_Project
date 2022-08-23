@@ -17,5 +17,6 @@ public interface IAppealRepository:IEntityRepository<Appeal>
     Task<IEnumerable<TalentDTO>> GetInternTalents(Guid userId);
     Task<IEnumerable<WorkHistoryDTO>> GetInternWorkHistories(Guid userId);
     Task<AppealInternInfoDTO> GetInternInfo(Guid adminId, int appealId);
+    void InternAppealQuotaControl(int advertId);
 
 }

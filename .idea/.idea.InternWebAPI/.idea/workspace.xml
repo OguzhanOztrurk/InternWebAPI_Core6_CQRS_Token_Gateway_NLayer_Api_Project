@@ -27,14 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a189e0a-335c-484e-828d-7830a68ca4d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AdminAPI/Controllers/WorkplaceInternController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Admin/Advert/ValidationRules/AdvertValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Admin/WorkplaceIntern/Commands/DeleteWorkplaceInternCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Admin/WorkplaceIntern/Commands/UpdateWorkplaceInternStateCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Admin/WorkplaceIntern/Queries/GetWorkplaceInternQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/AppealEvaluation/Commands/UpdateAppealEvulationCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/IWorkplaceInternRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/WorkplaceInternRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AdminAPI/Controllers/AdvertCategoriesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Admin/AdvertCategory/Queries/GetAdvertCategoryQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/AdvertCategory/Queries/GetCategoriesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Workplace/Queries/GetWorkplacesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Abstract/IAdvertCategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AdvertCategoryRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/Dto/WorkplaceDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAPI/Controllers/AdvertCategoryController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserAPI/Controllers/WorkplaceController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InternWebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InternWebAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/bin/Debug/net6.0/AdminAPI.pdb" afterDir="false" />
@@ -52,10 +53,10 @@
       <change beforePath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/refint/AdminAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/Debug/net6.0/refint/AdminAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdminAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdminAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/AdminAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Business.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Business.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Extensions/ServiceRegistration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Extensions/ServiceRegistration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Handlers/Intern/Appeal/Commands/CreateAppealCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Appeal/Commands/CreateAppealCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Handlers/Intern/Appeal/Queries/GetAppealQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Intern/Appeal/Queries/GetAppealQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Handlers/Intern/AppealEvaluation/Commands/CreateAppealEvulationCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Handlers/Intern/AppealEvaluation/Commands/UpdateAppealEvulationCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Handlers/Intern/AppealEvaluation/Commands/UpdateAppealEvulationCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/Business.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
@@ -70,9 +71,11 @@
       <change beforePath="$PROJECT_DIR$/Business/obj/Debug/net6.0/refint/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/Debug/net6.0/refint/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Business/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Core/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IAppealEvaluationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IAppealEvaluationRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AppealEvaluationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AppealEvaluationRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IAppealRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IAppealRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IWorkplaceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IWorkplaceRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AppealRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/AppealRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Repository/WorkplaceRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Repository/WorkplaceRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/Seed/AdvertCategorySeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/Seed/AdvertCategorySeed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/DataAccess.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/net6.0/Entities.dll" afterDir="false" />
@@ -84,9 +87,9 @@
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/ref/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/net6.0/refint/DataAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Concrete/WorkplaceIntern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/WorkplaceIntern.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/bin/Debug/net6.0/Entities.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/Entities.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/ref/Entities.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/obj/Debug/net6.0/ref/Entities.dll" afterDir="false" />
@@ -106,8 +109,6 @@
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/Debug/net6.0/IdentityAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IdentityAPI/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/IdentityAPI/obj/staticwebassets.pack.sentinel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InternWebAPI.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/InternWebAPI.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserAPI/Controllers/AppealEvaluationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/Controllers/AppealEvaluationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/Business.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/DataAccess.dll" afterDir="false" />
@@ -117,6 +118,7 @@
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/UserAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/UserAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/UserAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/bin/Debug/net6.0/UserAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/UserAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/ref/UserAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/UserAPI/obj/Debug/net6.0/ref/UserAPI.dll" afterDir="false" />
@@ -182,21 +184,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.AdminAPI">
+}</component>
+  <component name="RunManager" selected="Compound.App">
     <configuration name="Admin" type="CompoundRunConfigurationType">
       <toRun name="AdminAPI" type="LaunchSettings" />
       <toRun name="IdentityAPI" type="LaunchSettings" />
@@ -366,7 +368,8 @@
       <workItem from="1660714839628" duration="28130000" />
       <workItem from="1660801614749" duration="29259000" />
       <workItem from="1660887560683" duration="25786000" />
-      <workItem from="1661146923784" duration="15311000" />
+      <workItem from="1661146923784" duration="15384000" />
+      <workItem from="1661233111464" duration="6752000" />
     </task>
     <task id="LOCAL-00001" summary="Library Project">
       <created>1659560201925</created>
@@ -522,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660922231659</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Stajyer son onay ve iş yeri çalışanları yönetme işlemleri tamamlandı">
+      <created>1661182005485</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1661182005485</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +584,8 @@
     <MESSAGE value="Stajyer iş geçmişi ilanları" />
     <MESSAGE value="Adminin başvuru yapan stajyere ait bilgileri görüntülemesi." />
     <MESSAGE value="Onay ve genel işlemler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Onay ve genel işlemler" />
+    <MESSAGE value="Stajyer son onay ve iş yeri çalışanları yönetme işlemleri tamamlandı" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stajyer son onay ve iş yeri çalışanları yönetme işlemleri tamamlandı" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

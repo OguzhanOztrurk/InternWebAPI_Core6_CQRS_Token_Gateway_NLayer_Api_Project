@@ -167,5 +167,16 @@ public class AppealRepository:EfEntityRepositoryBase<Appeal, AppDbContext>,IAppe
         return result;
 
     }
-    
+
+    public void InternAppealQuotaControl(int advertId)
+    {
+        var advertQuota = Context.Adverts.Where(x => x.AdvertId == advertId).First();
+        var workplaceStudyNumber = Context.WorkplaceInterns.Where(x => x.AdvertId == advertId &&
+                                                                       x.isActive == true &&
+                                                                       x.DeleteDate == null).Count();
+        if (advertQuota.Quota<=workplaceStudyNumber)
+        {
+            throw new System.Exception("The quota for the ad has been filled.");
+        }
+    }
 }

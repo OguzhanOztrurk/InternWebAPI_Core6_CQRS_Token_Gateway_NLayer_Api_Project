@@ -28,8 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Handlers\Admin\AdvertCategory\Commands" />
+    <Folder Include="Handlers\Intern\AdvertCategory\Commands" />
     <Folder Include="Handlers\Intern\AdvertDetail\Commands" />
     <Folder Include="Handlers\Intern\Advert\Commands" />
+    <Folder Include="Handlers\Intern\Workplace\Commands" />
   </ItemGroup>
 
 </Project>

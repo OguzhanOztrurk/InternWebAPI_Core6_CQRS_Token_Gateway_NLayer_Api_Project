@@ -29,6 +29,7 @@ public class CreateAppealCommand:IRequest<IResponse>
             _appealRepository.AdvertAppealControl(request.AdvertId);
             _appealRepository.AppealControl(_currentRepository.UserId(),request.AdvertId);
             _appealRepository.InternStudyStateControl(_currentRepository.UserId());
+            _appealRepository.InternAppealQuotaControl(request.AdvertId);
 
             var appeal = new Entities.Concrete.Appeal();
             appeal.AdvertId = request.AdvertId;

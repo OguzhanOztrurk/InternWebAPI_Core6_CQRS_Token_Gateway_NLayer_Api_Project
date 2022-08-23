@@ -12,32 +12,32 @@ public class AdvertCategorySeed:IEntityTypeConfiguration<AdvertCategory>
             new AdvertCategory
             {
                 CategoryId = 1,
-                CategoryName = "Software",
-                Categorydefinition = "Companies that provide services in the field of software."
+                CategoryName = "Yazılım",
+                Categorydefinition = "Yazılım alanında staj ilanları eklenebilir ve görüntülenir."
             },
             new AdvertCategory
             {
                 CategoryId = 2,
-                CategoryName = "Architecture",
-                Categorydefinition = "Companies serving in the field of architecture.."
+                CategoryName = "İnşşat Teknikeri",
+                Categorydefinition = "İnşaat teknikeri alanında staj ilanları eklenebilir ve görüntülenir."
             },
         new AdvertCategory
             {
                 CategoryId = 3,
-                CategoryName = "Automobile",
-                Categorydefinition = "Companies serving in the field of automobile."
+                CategoryName = "Makine Mühendisliği",
+                Categorydefinition = "Makine mühendisliği alanında staj ilanları eklenebilir ve görüntülenir."
             },
             new AdvertCategory
             {
                 CategoryId = 4,
-                CategoryName = "Machine",
-                Categorydefinition = "Companies serving in the field of machine."
+                CategoryName = "Çocuk gelişimi",
+                Categorydefinition = "Çocuk gelişimi alanında staj ilanları eklenebilir ve görüntülenir."
             },
             new AdvertCategory
             {
                 CategoryId = 5,
-                CategoryName = "Build",
-                Categorydefinition = "Companies serving in the field of build."
+                CategoryName = "Harita Mühendisliği",
+                Categorydefinition = "Harita mühendisliği alanında staj ilanları eklenebilir ve görüntülenir."
             }
         );
     }
