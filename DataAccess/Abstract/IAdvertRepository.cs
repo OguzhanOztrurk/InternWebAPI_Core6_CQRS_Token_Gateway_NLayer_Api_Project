@@ -20,4 +20,7 @@ public interface IAdvertRepository:IEntityRepository<Advert>
     Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertList();
     Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertInCategoryList(int categoryId);
     Task<IEnumerable<ActiveAdvertListDTO>> GetAdvertInWorkplaceList(int workplaceId);
+
+    int GetCategoryInAdvertCount(int categoryId);
+    
 }

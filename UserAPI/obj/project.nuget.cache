@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EWHIBUMDmyENfPRBD+A6y/izH4xaEIWb3b334P1zj5HH4iKSd5DYSrASoc9LUIGoYb+ppZjOMvXxsn0V0Ye6bA==",
+  "dgSpecHash": "yJtS9XwhbhIcNQKwLrX8Mvvi4+SpZrBrh6qCLFgeoUJUKZeAx/fYlnutkZ1REBNmp0cadoQUlrulk7BuDhK3LQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\trabz\\Desktop\\Projeler\\2. Staj Projesi\\InternWebApi\\UserAPI\\UserAPI.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,8 @@
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

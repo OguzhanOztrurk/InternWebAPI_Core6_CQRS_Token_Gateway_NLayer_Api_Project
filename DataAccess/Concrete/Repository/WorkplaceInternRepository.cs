@@ -26,6 +26,7 @@ public class WorkplaceInternRepository:EfEntityRepositoryBase<WorkplaceIntern, A
                   workplace.AdminId == adminId
             select new WorkplaceIntern()
             {
+                WorkplaceInternId = workplaceIntern.WorkplaceInternId,
                 WorkplaceId = workplaceIntern.WorkplaceId,
                 InternId = workplaceIntern.InternId,
                 AcceptDate = workplaceIntern.AcceptDate,

@@ -29,7 +29,10 @@ public class DeleteWorkplaceInternCommand:IRequest<IResponse>
             workplaceIntern.DeleteDate=DateTime.Now;
             workplaceIntern.DeleteUserId = _currentRepository.UserId();
 
-            return new Response<Entities.Concrete.WorkplaceIntern>(workplaceIntern);
+            _workplaceInternRepository.Update(workplaceIntern);
+            await _workplaceInternRepository.SaveChangesAsync();
+            
+            return new Response<object>(null,"Has been deleted");
         }
     }
 }

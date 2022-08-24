@@ -272,3 +272,5 @@ C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\IdentityAPI\obj\Deb
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\IdentityAPI\obj\Debug\net6.0\IdentityAPI.genruntimeconfig.cache
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\IdentityAPI\obj\Debug\net6.0\ref\IdentityAPI.dll
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\IdentityAPI\bin\Debug\net6.0\Ardalis.SmartEnum.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\IdentityAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\IdentityAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

@@ -247,5 +247,15 @@ public class AdvertRepository:EfEntityRepositoryBase<Advert, AppDbContext>,IAdve
             }).ToListAsync();
         return result;
     }
+    public int GetCategoryInAdvertCount(int categoryId)
+    {
+        bool control = Query().Any(x => x.CategoryId == categoryId);
+        if (control)
+        {
+            var result = Query().Where(x => x.CategoryId == categoryId).Count(_=>_.CategoryId==categoryId);
+            return result;
+        }
 
+        return 0;
+    }
 }

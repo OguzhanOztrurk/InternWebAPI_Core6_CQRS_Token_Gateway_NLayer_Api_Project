@@ -6,7 +6,6 @@ namespace AdminAPI.Controllers;
 
 public class AdvertCategoriesController : BaseApiController
 {
-    
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {

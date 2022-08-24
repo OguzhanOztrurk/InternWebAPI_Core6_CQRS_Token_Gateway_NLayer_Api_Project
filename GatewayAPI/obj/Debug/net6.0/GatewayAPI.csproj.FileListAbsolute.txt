@@ -141,3 +141,5 @@ C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\GatewayAPI\obj\Debu
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\GatewayAPI\obj\Debug\net6.0\GatewayAPI.pdb
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\GatewayAPI\obj\Debug\net6.0\GatewayAPI.genruntimeconfig.cache
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\GatewayAPI\obj\Debug\net6.0\ref\GatewayAPI.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\GatewayAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\GatewayAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

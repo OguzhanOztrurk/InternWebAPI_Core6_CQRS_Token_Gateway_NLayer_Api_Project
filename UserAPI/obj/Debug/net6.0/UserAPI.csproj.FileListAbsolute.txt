@@ -267,3 +267,5 @@ C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\UserAPI\obj\Debug\n
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\UserAPI\obj\Debug\net6.0\UserAPI.genruntimeconfig.cache
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\UserAPI\obj\Debug\net6.0\ref\UserAPI.dll
 C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\UserAPI\bin\Debug\net6.0\Ardalis.SmartEnum.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\UserAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\trabz\Desktop\Projeler\2. Staj Projesi\InternWebApi\UserAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

@@ -53,11 +53,12 @@ public class UpdateAppealEvulationCommand:IRequest<IResponse>
 
             var advertId = _appealEvaluationRepository.GetAdvertId(request.AppealId);
             var workplaceIntern = new WorkplaceIntern();
+            workplaceIntern.AdvertId = advertId;
             workplaceIntern.WorkplaceId = _appealEvaluationRepository.GetAppealWorkplaceId(request.AppealId);
             workplaceIntern.InternId = _currentRepository.UserId();
             workplaceIntern.AcceptDate=DateTime.Now;
             workplaceIntern.isActive = true;
-            workplaceIntern.AdvertId = advertId;
+            
 
             _workplaceInternRepository.Add(workplaceIntern);
             await _workplaceInternRepository.SaveChangesAsync();

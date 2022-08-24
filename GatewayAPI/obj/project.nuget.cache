@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3rrfn08oyBKxrmFwnXdrNpfDXNxtyFyo0WSolXanEqaVQnrz194exmkwTPBTdFEIhJGM63sNhJOovgu89GhrsQ==",
+  "dgSpecHash": "i2Z1IFgk0XkeshRsyXxXsG6RMhMdQWxcTBpr+ETXEbdlLwNQp83QqsiU3+t/mqM6ukwaHW+KzdCosK+R/reU8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\trabz\\Desktop\\Projeler\\2. Staj Projesi\\InternWebApi\\GatewayAPI\\GatewayAPI.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.0\\microsoft.aspnetcore.jsonpatch.5.0.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.middlewareanalysis\\5.0.0\\microsoft.aspnetcore.middlewareanalysis.5.0.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.0.nupkg.sha512",
+    "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
+    "C:\\Users\\trabz\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\5.0.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.5.0.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "C:\\Users\\trabz\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",

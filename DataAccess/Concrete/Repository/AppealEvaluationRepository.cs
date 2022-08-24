@@ -121,7 +121,7 @@ public class AppealEvaluationRepository:EfEntityRepositoryBase<AppealEvaluation,
         var result =  Context.Appeals.Include(x => x.Advert)
             .ThenInclude(x => x.Workplace)
             .Where(x => x.AppealId == appealId && x.Advert.AdvertId == x.AdvertId &&
-                        x.Advert.Workplace.WorkplaceId == x.Advert.AdvertId)
+                        x.Advert.Workplace.WorkplaceId == x.Advert.WorkplaceId)
             .Select(x => x.Advert.Workplace.WorkplaceId).First();
         return result;
     }

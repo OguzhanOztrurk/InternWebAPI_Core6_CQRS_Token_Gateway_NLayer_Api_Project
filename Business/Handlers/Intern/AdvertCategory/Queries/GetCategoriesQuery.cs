@@ -1,5 +1,6 @@
 using Core.Wrappers;
 using DataAccess.Abstract;
+using Entities.Dto;
 using MediatR;
 
 namespace Business.Handlers.Intern.AdvertCategory.Queries;
@@ -21,8 +22,8 @@ public class GetCategoriesQuery:IRequest<IResponse>
         {
             _currentRepository.UserControl(_currentRepository.UserId());
 
-            var categories = await _advertCategoryRepository.GetListAsync();
-            return new Response<IEnumerable<Entities.Concrete.AdvertCategory>>(categories);
+            var categories = await _advertCategoryRepository.GetCategoryList();
+            return new Response<IEnumerable<CategoryInAdvertCountDTO>>(categories);
         }
     }
 }
