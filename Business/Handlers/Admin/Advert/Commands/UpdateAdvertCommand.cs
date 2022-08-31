@@ -43,6 +43,7 @@ public class UpdateAdvertCommand:IRequest<IResponse>
             _advertRepository.AdvertControl(request.AdvertId);
             _advertRepository.AdvertWorkplaceActive(request.AdvertId);
             _advertRepository.AdminWorkplaceControl(request.WorkplaceId,_currentRepository.UserId());
+            _advertRepository.AdvertStartDateControl(request.StartDate,request.EndDate);
 
             var advert = await _advertRepository.GetAsync(x => x.AdvertId == request.AdvertId);
             advert.WorkplaceId = request.WorkplaceId;

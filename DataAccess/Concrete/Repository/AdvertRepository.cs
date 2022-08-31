@@ -106,12 +106,12 @@ public class AdvertRepository:EfEntityRepositoryBase<Advert, AppDbContext>,IAdve
 
     public void AdvertStartDateControl(DateTime startDate,DateTime endDate)
     {
-        if (startDate<DateTime.Now)
+        if (startDate<DateTime.Now.AddDays(-1))
         {
             throw new System.Exception("Announcement start date can be today at the earliest.");
         }
 
-        if (endDate<startDate)
+        if (endDate<=startDate)
         {
             throw new System.Exception("Announcement end date cannot be earlier than the start date.");
         }
